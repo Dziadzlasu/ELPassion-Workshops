@@ -1,3 +1,8 @@
-<h1><%= @hello_world %></h1>
-
-<%= link_to "Movies", movies_path %>
+<div class="container">
+  <div class="background"></div>
+  <div class="app-name"><%=Rails.application.class.parent_name%></div>
+  <div class="sign-in-button">
+    <%= link_to 'Add new movie', new_movie_path, class: 'button landing' %>
+    <%= link_to 'Movies list', movies_path, class: 'button list' %>
+  </div>
+</div>
