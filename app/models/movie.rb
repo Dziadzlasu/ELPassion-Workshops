@@ -8,6 +8,7 @@ class Movie < ApplicationRecord
     ratings_array = ratings.map do |rating|
       rating.value
     end
+    return if ratings_array.empty?
   (ratings_array.sum / ratings_array.count.to_f).round(2)
   end
 end
