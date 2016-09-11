@@ -12,19 +12,7 @@
   </head>
 
   <body>
-    <div class="top-bar">
-  <div class="top-bar-left">
-    <ul class="dropdown menu" data-dropdown-menu>
-      <li class="menu-text"><a href="http://localhost:3000/"><%=Rails.application.class.parent_name%></a></li>
-      <li>
-        <a href="http://localhost:3000/movies/">Movies</a>
-      </li>
-      <li><a href="http://localhost:3000/movies/new">Add New</a></li>
-      <li><a href="http://localhost:3000/contact">Contact</a></li>
-    </ul>
-  </div>
-</div>
-
+<%= render 'layouts/navbar' %>
     <div class="row">
       <div class="small-6 large-12 columns"><%= yield %></div>
     </div>

@@ -1,0 +1,27 @@
+<div class="top-bar">
+<div class="top-bar-left">
+<ul class="dropdown menu" data-dropdown-menu>
+  <li class="menu-text"><a href="http://localhost:3000/"><%=Rails.application.class.parent_name%></a></li>
+  <li>
+    <a href="http://localhost:3000/movies/">Movies</a>
+  </li>
+  <li><a href="http://localhost:3000/movies/new">Add New</a></li>
+  <li><a href="http://localhost:3000/contact">Contact</a></li>
+</ul>
+</div>
+<div class="top-bar-right">
+  <ul class="dropdown menu" data-dropdown-menu>
+    <% if current_user.present? %>
+    <li>
+      <%= current_user.email %>
+    </li>
+    <li>
+      <%= link_to 'sign out', destroy_user_session_path, method: :delete %>
+    </li>
+    <% else %>
+    <li>
+      <%= link_to 'sign in', new_user_session_path %>
+    <% end %>
+  </ul>
+</div>
+</div>
