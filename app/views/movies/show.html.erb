@@ -15,6 +15,12 @@
 </p>
 
 <p>
+  <% (1..10).each do |value| %>
+    <%= link_to value, ratings_path(value: value, movie_id: @movie.id), method: :post %>
+  <% end %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @movie.description %>
 </p>
