@@ -18,6 +18,8 @@
     <li>
       <%= link_to 'sign out', destroy_user_session_path, method: :delete %>
     </li>
+    <li>
+      <%= link_to 'delete account', user_path(current_user), method: :delete %>
     <% else %>
     <li>
       <%= link_to 'sign in', new_user_session_path %>
