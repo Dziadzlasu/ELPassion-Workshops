@@ -1,12 +1,18 @@
 <div class="top-bar">
 <div class="top-bar-left">
 <ul class="dropdown menu" data-dropdown-menu>
-  <li class="menu-text"><a href="http://localhost:3000/"><%=Rails.application.class.parent_name%></a></li>
-  <li>
-    <a href="http://localhost:3000/movies/">Movies</a>
+  <li class="menu-text">
+    <%= link_to Rails.application.class.parent_name, root_path %>
   </li>
-  <li><a href="http://localhost:3000/movies/new">Add New</a></li>
-  <li><a href="http://localhost:3000/contact">Contact</a></li>
+  <li>
+    <%= link_to 'Movies', movies_path %>
+  </li>
+  <li>
+    <%= link_to 'Add New', new_movie_path %>
+  </li>
+  <li>
+    <%= link_to 'Contact', contact_path %>
+  </li>
 </ul>
 </div>
 <div class="top-bar-right">
